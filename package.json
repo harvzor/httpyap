@@ -1,0 +1,17 @@
+{
+  "name": "yac",
+  "version": "0.1.0",
+  "description": "Pipe .http file syntax to httpyac via stdin",
+  "type": "module",
+  "bin": {
+    "yac": "./bin/yac.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "httpyac": "^6.16.7"
+  },
+  "keywords": ["httpyac", "http", "rest", "cli"],
+  "license": "MIT"
+}
