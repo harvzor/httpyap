@@ -2,46 +2,7 @@
 
 Pipe `.http` file syntax to [httpyac](https://httpyac.github.io/) via stdin.
 
-```sh
-$ "GET https://httpbin.org/json" | node bin\yac.mjs
-
----------------------
-
-GET https://httpbin.org/json
-accept: */*
-accept-encoding: gzip, deflate, br
-user-agent: httpyac
-HTTP/1.1 200  - OK
-access-control-allow-credentials: true
-access-control-allow-origin: *
-connection: keep-alive
-content-length: 429
-content-type: application/json
-date: Thu, 14 May 2026 10:31:02 GMT
-server: gunicorn/19.9.0
-
-{
-  "slideshow": {
-    "author": "Yours Truly",
-    "date": "date of publication",
-    "slides": [
-      {
-        "title": "Wake up to WonderWidgets!",
-        "type": "all"
-      },
-      {
-        "items": [
-          "Why <em>WonderWidgets</em> are great",
-          "Who <em>buys</em> WonderWidgets"
-        ],
-        "title": "Overview",
-        "type": "all"
-      }
-    ],
-    "title": "Sample Slide Show"
-  }
-}
-```
+![demo](.github/demo.gif)
 
 ## Installation
 
