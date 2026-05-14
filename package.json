@@ -1,6 +1,6 @@
 {
   "name": "yac",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Pipe .http file syntax to httpyac via stdin",
   "type": "module",
   "bin": {
