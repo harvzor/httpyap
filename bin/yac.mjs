@@ -1,14 +1,33 @@
 #!/usr/bin/env node
 
+import { createInterface } from 'readline';
 import { send, cli, store, utils } from 'httpyac';
 
+function readInteractiveInput() {
+  return new Promise((resolve) => {
+    const rl = createInterface({ input: process.stdin });
+    const lines = [];
+    rl.on('line', (line) => {
+      if (line.trimEnd() === '###') {
+        rl.close();
+      } else {
+        lines.push(line);
+      }
+    });
+    rl.on('close', () => resolve(lines.join('\n')));
+  });
+}
+
 async function main() {
-  // Read all of stdin
-  const chunks = [];
-  for await (const chunk of process.stdin) {
-    chunks.push(chunk);
+  let input;
+  if (process.stdin.isTTY) {
+    process.stderr.write('Paste your .http request, then type ### to send:\n');
+    input = (await readInteractiveInput()).trim();
+  } else {
+    const chunks = [];
+    for await (const chunk of process.stdin) chunks.push(chunk);
+    input = Buffer.concat(chunks).toString('utf8').trim();
   }
-  const input = Buffer.concat(chunks).toString('utf8').trim();
 
   if (!input) {
     process.stderr.write('Usage: echo "GET https://example.com" | yac\n');
