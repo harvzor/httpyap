@@ -43,6 +43,8 @@ async function main() {
   const logResponse = utils.requestLoggerFactory(
     (text) => process.stdout.write(text + '\n'),
     {
+      requestOutput: true,
+      requestHeaders: true,
       responseHeaders: true,
       responseBodyPrettyPrint: true,
       responseBodyLength: 0,
