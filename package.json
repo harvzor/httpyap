@@ -4,7 +4,7 @@
   "description": "Pipe .http file syntax to httpyac via stdin",
   "type": "module",
   "bin": {
-    "yac": "./bin/yac.mjs"
+    "yac": "./bin/yac.js"
   },
   "engines": {
     "node": ">=18"
