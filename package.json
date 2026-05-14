@@ -6,6 +6,9 @@
   "bin": {
     "yac": "./bin/yac.js"
   },
+  "files": [
+    "bin/"
+  ],
   "engines": {
     "node": ">=18"
   },
