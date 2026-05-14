@@ -9,6 +9,12 @@
   "engines": {
     "node": ">=18"
   },
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "24.15.0"
+    }
+  },
   "dependencies": {
     "httpyac": "^6.16.7"
   },
