@@ -87,6 +87,39 @@ Content-Type: application/json
   "foo": "bar"
 }' | yac
 ```
+
+## Using variables
+
+### Via .env files
+
+Yac supports `.env` files via httpyac's variable resolution. Place a `.env` file in the working directory and reference variables using `{{name}}` syntax in your request:
+
+```ini
+# .env
+token=my-secret-token
+baseUrl=https://httpbin.org
+```
+
+```powershell
+@"
+GET {{baseUrl}}/json
+Authorization: Bearer {{token}}
+"@ | yac
+```
+
+### Inline variables
+
+Variables can be defined inline in the request using `@name = value`:
+
+```powershell
+@"
+@token = my-secret-token
+
+GET https://httpbin.org/json
+Authorization: Bearer {{token}}
+"@ | yac
+```
+
 ## Output
 
 Displays the full request/response exchange with syntax highlighting, matching httpyac's default output format.
