@@ -39,15 +39,53 @@ GET https://httpbin.org/json
 echo "GET https://httpbin.org/json" | yac
 ```
 
+Multiline:
+
+```bash
+yac << 'EOF'
+POST https://httpbin.org/post
+Content-Type: application/json
+
+{
+  "foo": "bar"
+}
+EOF
+```
+
 #### PowerShell
+
 ```powershell
 "GET https://httpbin.org/json" | yac
+```
+
+Multiline:
+
+```powershell
+@"
+POST https://httpbin.org/post
+Content-Type: application/json
+
+{
+  "foo": "bar"
+}
+"@ | yac
 ```
 
 #### Nushell
 
 ```nushell
 "GET https://httpbin.org/json" | yac
+```
+
+Multiline:
+
+```nushell
+'POST https://httpbin.org/post
+Content-Type: application/json
+
+{
+  "foo": "bar"
+}' | yac
 ```
 ## Output
 
