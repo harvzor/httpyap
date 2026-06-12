@@ -7,13 +7,13 @@ Requires Docker.
 From the repo root:
 
 ```sh
-docker build -t vhs-yac -f record/Dockerfile .
+docker build -t vhs-yap -f record/Dockerfile .
 ```
 
 ## Render
 
 ```sh
-docker run --rm -v $"(pwd):/vhs" vhs-yac record/yac.tape
+docker run --rm -v $"(pwd):/vhs" vhs-yap record/yap.tape
 ```
 
 The GIF will be saved as `demo.gif` in the current directory. Copy it to `.github/demo.gif` to update the README demo.
