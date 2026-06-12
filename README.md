@@ -4,6 +4,10 @@ Pipe `.http` file syntax to [httpyac](https://httpyac.github.io/) via stdin.
 
 ![demo](.github/demo.gif)
 
+## Agentic use
+
+The main use case of httpyap is teaching agents how to make readable requests, otherwise they tend to prefer to use curl.
+
 ## Installation
 
 Requires Node.js 18+. Install directly from GitHub:
@@ -16,6 +20,22 @@ To uninstall:
 
 ```sh
 npm uninstall -g httpyap
+```
+
+### Get the skill
+
+A agent skill is available, teaching AI agents how to use `yap`. Install it with the [`skills` npm tool](https://www.npmjs.com/package/skills):
+
+Install globally (recommended - keeps skills out of individual project repos):
+
+```sh
+npx skills add git@github.com:harvzor/httpyap.git -g
+```
+
+Or install into the current project only:
+
+```sh
+npx skills add git@github.com:harvzor/httpyap.git
 ```
 
 ## Usage
@@ -107,9 +127,9 @@ Content-Type: application/json
 }' | yap
 ```
 
-## Using variables
+### Using variables
 
-### Via .env files
+#### Via .env files
 
 Yac supports `.env` files via httpyac's variable resolution. Place a `.env` file in the working directory and reference variables using `{{name}}` syntax in your request:
 
@@ -126,7 +146,7 @@ Authorization: Bearer {{token}}
 "@ | yap
 ```
 
-### Inline variables
+#### Inline variables
 
 Variables can be defined inline in the request using `@name = value`:
 
