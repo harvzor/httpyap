@@ -6,7 +6,20 @@ Pipe `.http` file syntax to [httpyac](https://httpyac.github.io/) via stdin.
 
 ## Agentic use
 
-The main use case of httpyap is teaching agents how to make readable requests, otherwise they tend to prefer to use curl.
+The main use case of httpyap is teaching agents how to make readable requests, otherwise they tend to prefer to use curl
+
+Why http syntax is better than curl:
+
+- Curl acts different between operating systems
+- Http is prettier ✨
+
+### Without the yap skill
+
+![Using an agent without yap](.github/curl.png)
+
+### With the yap skill
+
+![Using an agent with yap](.github/yap.png)
 
 ## Installation
 
