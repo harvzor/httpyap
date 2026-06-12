@@ -4,7 +4,7 @@ Set FontSize 20
 Set Width 1200
 Set Height 1200
 
-Type 'echo "GET https://httpbin.org/json" | yac'
+Type 'echo "GET https://httpbin.org/json" | yap'
 
 Enter
 

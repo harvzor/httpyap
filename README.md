@@ -1,4 +1,4 @@
-# yac
+# httpyap
 
 Pipe `.http` file syntax to [httpyac](https://httpyac.github.io/) via stdin.
 
@@ -15,17 +15,17 @@ npm install -g github:harvzor/yac
 To uninstall:
 
 ```sh
-npm uninstall -g yac
+npm uninstall -g httpyap
 ```
 
 ## Usage
 
 ### Interactive
 
-Type `yac`, paste your request, then type `###` on its own line and press Enter to send:
+Type `yap`, paste your request, then type `###` on its own line and press Enter to send:
 
 ```sh
-$ yac
+$ yap
 Paste your .http request, then type ### to send:
 GET https://httpbin.org/json
 ###
@@ -36,13 +36,13 @@ GET https://httpbin.org/json
 #### Bash
 
 ```bash
-echo "GET https://httpbin.org/json" | yac
+echo "GET https://httpbin.org/json" | yap
 ```
 
 Multiline:
 
 ```bash
-yac << 'EOF'
+yap << 'EOF'
 POST https://httpbin.org/post
 Content-Type: application/json
 
@@ -55,13 +55,13 @@ EOF
 #### Zsh
 
 ```zsh
-echo "GET https://httpbin.org/json" | yac
+echo "GET https://httpbin.org/json" | yap
 ```
 
 Multiline:
 
 ```zsh
-yac << 'EOF'
+yap << 'EOF'
 POST https://httpbin.org/post
 Content-Type: application/json
 
@@ -74,7 +74,7 @@ EOF
 #### PowerShell
 
 ```powershell
-"GET https://httpbin.org/json" | yac
+"GET https://httpbin.org/json" | yap
 ```
 
 Multiline:
@@ -87,13 +87,13 @@ Content-Type: application/json
 {
   "foo": "bar"
 }
-"@ | yac
+"@ | yap
 ```
 
 #### Nushell
 
 ```nushell
-"GET https://httpbin.org/json" | yac
+"GET https://httpbin.org/json" | yap
 ```
 
 Multiline:
@@ -104,7 +104,7 @@ Content-Type: application/json
 
 {
   "foo": "bar"
-}' | yac
+}' | yap
 ```
 
 ## Using variables
@@ -123,7 +123,7 @@ baseUrl=https://httpbin.org
 @"
 GET {{baseUrl}}/json
 Authorization: Bearer {{token}}
-"@ | yac
+"@ | yap
 ```
 
 ### Inline variables
@@ -136,9 +136,10 @@ Variables can be defined inline in the request using `@name = value`:
 
 GET https://httpbin.org/json
 Authorization: Bearer {{token}}
-"@ | yac
+"@ | yap
 ```
 
 ## Output
 
 Displays the full request/response exchange with syntax highlighting, matching httpyac's default output format.
+

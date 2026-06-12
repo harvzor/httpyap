@@ -1,10 +1,10 @@
 {
-  "name": "yac",
+  "name": "httpyap",
   "version": "1.0.0",
   "description": "Pipe .http file syntax to httpyac via stdin",
   "type": "module",
   "bin": {
-    "yac": "./bin/yac.js"
+    "yap": "./bin/yap.js"
   },
   "files": [
     "bin/"
@@ -21,6 +21,6 @@
   "dependencies": {
     "httpyac": "^6.16.7"
   },
-  "keywords": ["httpyac", "http", "rest", "cli"],
+  "keywords": ["httpyap", "yap", "httpyac", "http", "rest", "cli"],
   "license": "MIT"
 }

@@ -30,7 +30,7 @@ async function main() {
   }
 
   if (!input) {
-    process.stderr.write('Usage: echo "GET https://example.com" | yac\n');
+    process.stderr.write('Usage: echo "GET https://example.com" | yap\n');
     process.exit(1);
   }
 
