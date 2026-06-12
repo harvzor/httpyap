@@ -52,6 +52,25 @@ Content-Type: application/json
 EOF
 ```
 
+#### Zsh
+
+```zsh
+echo "GET https://httpbin.org/json" | yac
+```
+
+Multiline:
+
+```zsh
+yac << 'EOF'
+POST https://httpbin.org/post
+Content-Type: application/json
+
+{
+  "foo": "bar"
+}
+EOF
+```
+
 #### PowerShell
 
 ```powershell
