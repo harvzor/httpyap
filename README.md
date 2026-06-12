@@ -144,7 +144,7 @@ Content-Type: application/json
 
 #### Via .env files
 
-Yac supports `.env` files via httpyac's variable resolution. Place a `.env` file in the working directory and reference variables using `{{name}}` syntax in your request:
+Httpyap supports `.env` files via httpyac's variable resolution. Place a `.env` file in the working directory and reference variables using `{{name}}` syntax in your request:
 
 ```ini
 # .env
