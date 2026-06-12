@@ -45,6 +45,7 @@ async function main() {
     {
       requestOutput: true,
       requestHeaders: true,
+      requestBodyLength: 0,
       responseHeaders: true,
       responseBodyPrettyPrint: true,
       responseBodyLength: 0,
