@@ -9,7 +9,7 @@ Pipe `.http` file syntax to [httpyac](https://httpyac.github.io/) via stdin.
 Requires Node.js 18+. Install directly from GitHub:
 
 ```sh
-npm install -g github:harvzor/yac
+npm install -g github:harvzor/httpyap
 ```
 
 To uninstall:
