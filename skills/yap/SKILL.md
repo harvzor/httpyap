@@ -116,22 +116,26 @@ GET https://localhost:8080/api/endpoint
 
 Pipe the `.http` text to `yap` via stdin. The key challenge across shells is preserving newlines in the string — the `.http` format is line-based and yap needs actual newlines, not escaped sequences in the HTTP text itself.
 
-### Bash
+### Bash / Zsh
 
-Single-quoted strings preserve newlines naturally:
+Use a heredoc for multi-line requests:
 
 ```bash
-'GET https://httpbin.org/anything
-Accept: application/json' | yap
+yap << 'EOF'
+GET https://httpbin.org/anything
+Accept: application/json
+EOF
 ```
 
 With a variable and bearer token:
 
 ```bash
-'@token = mysecrettoken
+yap << 'EOF'
+@token = mysecrettoken
 
 GET https://api.example.com/users
-Authorization: Bearer {{token}}' | yap
+Authorization: Bearer {{token}}
+EOF
 ```
 
 ### PowerShell
@@ -164,7 +168,7 @@ For a one-liner, use a double-quoted string with `` `n `` for newlines (note dou
 
 ### Nushell
 
-Like bash, single-quoted strings preserve newlines naturally:
+In Nushell, string literals are values (not commands), so they can be piped directly without `echo`:
 
 ```nushell
 'GET https://httpbin.org/anything
@@ -179,3 +183,4 @@ With a variable and bearer token:
 GET https://api.example.com/users
 Authorization: Bearer {{token}}' | yap
 ```
+
