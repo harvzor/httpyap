@@ -69,9 +69,13 @@ GET https://httpbin.org/json
 <details open>
 <summary>Bash</summary>
 
+Single line:
+
 ```bash
 echo "GET https://httpbin.org/json" | yap
 ```
+
+Multiline:
 
 ```bash
 yap << 'EOF'
@@ -89,9 +93,13 @@ EOF
 <details>
 <summary>Zsh</summary>
 
+Single line:
+
 ```zsh
 echo "GET https://httpbin.org/json" | yap
 ```
+
+Multiline:
 
 ```zsh
 yap << 'EOF'
@@ -109,9 +117,13 @@ EOF
 <details>
 <summary>PowerShell</summary>
 
+Single line:
+
 ```powershell
 "GET https://httpbin.org/json" | yap
 ```
+
+Multiline:
 
 ```powershell
 @"
@@ -129,9 +141,13 @@ Content-Type: application/json
 <details>
 <summary>Nushell</summary>
 
+Single line:
+
 ```nushell
 "GET https://httpbin.org/json" | yap
 ```
+
+Multiline:
 
 ```nushell
 'POST https://httpbin.org/post
