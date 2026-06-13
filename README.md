@@ -66,17 +66,12 @@ GET https://httpbin.org/json
 
 ### Piped
 
-#### Single line
-
-```sh
-echo "GET https://httpbin.org/json" | yap   # Bash / Zsh
-"GET https://httpbin.org/json" | yap         # PowerShell / Nushell
-```
-
-#### Multiline
-
 <details open>
 <summary>Bash</summary>
+
+```bash
+echo "GET https://httpbin.org/json" | yap
+```
 
 ```bash
 yap << 'EOF'
@@ -95,6 +90,10 @@ EOF
 <summary>Zsh</summary>
 
 ```zsh
+echo "GET https://httpbin.org/json" | yap
+```
+
+```zsh
 yap << 'EOF'
 POST https://httpbin.org/post
 Content-Type: application/json
@@ -111,6 +110,10 @@ EOF
 <summary>PowerShell</summary>
 
 ```powershell
+"GET https://httpbin.org/json" | yap
+```
+
+```powershell
 @"
 POST https://httpbin.org/post
 Content-Type: application/json
@@ -125,6 +128,10 @@ Content-Type: application/json
 
 <details>
 <summary>Nushell</summary>
+
+```nushell
+"GET https://httpbin.org/json" | yap
+```
 
 ```nushell
 'POST https://httpbin.org/post
