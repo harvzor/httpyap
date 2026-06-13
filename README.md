@@ -66,13 +66,17 @@ GET https://httpbin.org/json
 
 ### Piped
 
-#### Bash
+#### Single line
 
-```bash
-echo "GET https://httpbin.org/json" | yap
+```sh
+echo "GET https://httpbin.org/json" | yap   # Bash / Zsh
+"GET https://httpbin.org/json" | yap         # PowerShell / Nushell
 ```
 
-Multiline:
+#### Multiline
+
+<details open>
+<summary>Bash</summary>
 
 ```bash
 yap << 'EOF'
@@ -85,13 +89,10 @@ Content-Type: application/json
 EOF
 ```
 
-#### Zsh
+</details>
 
-```zsh
-echo "GET https://httpbin.org/json" | yap
-```
-
-Multiline:
+<details>
+<summary>Zsh</summary>
 
 ```zsh
 yap << 'EOF'
@@ -104,13 +105,10 @@ Content-Type: application/json
 EOF
 ```
 
-#### PowerShell
+</details>
 
-```powershell
-"GET https://httpbin.org/json" | yap
-```
-
-Multiline:
+<details>
+<summary>PowerShell</summary>
 
 ```powershell
 @"
@@ -123,13 +121,10 @@ Content-Type: application/json
 "@ | yap
 ```
 
-#### Nushell
+</details>
 
-```nushell
-"GET https://httpbin.org/json" | yap
-```
-
-Multiline:
+<details>
+<summary>Nushell</summary>
 
 ```nushell
 'POST https://httpbin.org/post
@@ -139,6 +134,8 @@ Content-Type: application/json
   "foo": "bar"
 }' | yap
 ```
+
+</details>
 
 ### Using variables
 
